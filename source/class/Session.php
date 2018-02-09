@@ -41,4 +41,9 @@ class Session
         }
         return $this;
     }
+
+    public function close() {
+        session_write_close();
+        return $this;
+    }
 }
