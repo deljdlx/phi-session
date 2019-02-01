@@ -4,18 +4,36 @@
 namespace Phi\Session;
 
 
+use Phi\Traits\Collection;
+
 class Session
 {
-    private static $sessionStarted = false;
+
+
+    const SESSION_DEFAULT_NAME = 'phi-session';
+
+    private static $startedSession;
+    private $name;
+
+
     protected $variables;
 
-    public function __construct()
+    public function __construct($name = null)
     {
-        if(!static::$sessionStarted) {
+        if(!self::$startedSession) {
+            self::$startedSession = true;
             session_start();
+            session_regenerate_id();
         }
 
         $this->variables = &$_SESSION;
+
+    }
+
+    public function destroy()
+    {
+        session_destroy();
+        return $this;
     }
 
     public function set($name, $value)
@@ -34,11 +52,16 @@ class Session
         }
     }
 
+    public function getVariables()
+    {
+        return $this->variables;
+    }
+
+
+
     public function delete($name)
     {
-        if(array_key_exists($name, $this->variables)) {
-            unset($this->variables[$name]);
-        }
+        unset($this->variables[$name]);
         return $this;
     }
 
