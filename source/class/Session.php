@@ -20,7 +20,9 @@ class Session
 
     public function __construct($name = null)
     {
-        if(!self::$startedSession) {
+
+
+        if(!self::$startedSession && session_status() !== \PHP_SESSION_ACTIVE ) {
             self::$startedSession = true;
             session_start();
             session_regenerate_id();
