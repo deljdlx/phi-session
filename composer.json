@@ -1,14 +1,14 @@
 {
-	"name": "phi-session",
+	"name": "elbiniou/phi-session",
 	"description": "Phi session",
 
 	"repositories": [
-		{"type": "vcs", "url": "https://github.com/ElBiniou/phi-http"}
+		{"type": "vcs", "url": "https://github.com/elbiniou/phi-http"}
 	],
 
 	"require":
 	{
-		"phi-http": "dev-master"
+		"elbiniou/phi-http": "0.1.0"
 	},
 
 	"autoload": {

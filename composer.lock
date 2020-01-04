@@ -1,0 +1,46 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e2ffb36903d5c9e58509dc3bbb4f5345",
+    "packages": [
+        {
+            "name": "elbiniou/phi-http",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElBiniou/phi-http.git",
+                "reference": "7641db20821a24982cae37da1b5da49b5d80a29b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElBiniou/phi-http/zipball/7641db20821a24982cae37da1b5da49b5d80a29b",
+                "reference": "7641db20821a24982cae37da1b5da49b5d80a29b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phi\\HTTP\\": "source/class"
+                },
+                "files": []
+            },
+            "description": "Phi http",
+            "support": {
+                "source": "https://github.com/ElBiniou/phi-http/tree/0.1.0",
+                "issues": "https://github.com/ElBiniou/phi-http/issues"
+            },
+            "time": "2020-01-04T13:18:19+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
